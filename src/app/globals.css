@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+/* ------- Light theme ------- */
+:root {
+  --color-background: #ffffff;
+  --color-background-two: #fafafafa;
+  --color-background-three: #0040c1;
+  --color-foreground: #0c0e12;
+  --color-primary: #155eef;
+  --color-primary-foreground: #ffffff;
+  --color-card: #181d27;
+  --color-dark-card: #0a0d12;
+  --color-card-foreground: #0c0e12;
+  --color-muted: #f7f7f7;
+  --color-muted-foreground: #535862;
+  --color-border: #d5d7da;
+  --color-ring: #155eef;
+  --color-subtle-ink: #414651;
+  --color-ink-dim: #94979c;
+  --color-accent: #004eeb;
+  --color-accent-contrast: #b2ddff;
+  --color-accent-soft: #84caff;
+}
+
+/* ------- Dark overrides ------- */
+.dark {
+  --color-background: #0c0e12;
+  --color-background-two: #0c0e12;
+  --color-background-three: #13161b;
+  --color-foreground: #ffffff;
+  --color-primary: #155eef;
+  --color-primary-foreground: #ffffff;
+  --color-card: #f7f7f7;
+  --color-dark-card: #ffffff;
+  --color-card-foreground: #ffffff;
+  --color-muted: #1d2939;
+  --color-muted-foreground: #94979c;
+  --color-border: #373a41;
+  --color-ring: #818cf8;
+  --color-subtle-ink: #cecfd2;
+  --color-ink-dim: #a4a7ae;
+  --color-accent: #cecfd2;
+}
+
+/* Utilities mapping */
+@layer utilities {
+  .bg-background {
+    background-color: var(--color-background);
+  }
+  .bg-background-two {
+    background-color: var(--color-background-two);
+  }
+  .bg-background-three {
+    background-color: var(--color-background-three);
+  }
+  .text-foreground {
+    color: var(--color-foreground);
+  }
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  .text-subtle-ink {
+    color: var(--color-subtle-ink);
+  }
+  .text-primary-foreground {
+    color: var(--color-primary-foreground);
+  }
+  .text-dark {
+    color: var(--color-dark-card);
+  }
+  .bg-card {
+    color: var(--color-card);
+  }
+  .text-accent {
+    color: var(--color-accent);
+  }
+  .text-card-foreground {
+    color: var(--color-card-foreground);
+  }
+  .bg-muted {
+    background-color: var(--color-muted);
+  }
+  .text-muted-foreground {
+    color: var(--color-muted-foreground);
+  }
+  .border-border {
+    border-color: var(--color-border);
+  }
+  .ring-ring {
+    --tw-ring-color: var(--color-ring);
+  }
+}
+
+.btn-primary-color {
+  background-color: #155eef; /* Base color */
+  color: #ffffff;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-primary-color:hover {
+  background-color: #1e40af; /* Darker hover */
+}
+
+.btn-primary-color:focus {
+  outline: none;
+  box-shadow:
+    0 0 0 2px #1e40af,
+    0 0 0 4px white; /* Focus ring */
+}
+
+@media (max-width: 1024px) {
+  .page-container {
+    padding: 0 1rem;
+    /* background-color: #0C0E12; */
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    zoom: 85%;
+  }
+}
