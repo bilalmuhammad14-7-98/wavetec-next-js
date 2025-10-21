@@ -93,11 +93,13 @@ export default function FAQs({ value, value2 }) {
 
         <div>
           {data2?.[0] && (
-            <div className="text-xl font-semibold text-[#181D27] dark:text-[#F7F7F7] mb-1">
+            <div className="text-lg md:text-xl font-semibold text-[#181D27] dark:text-[#F7F7F7] mb-1">
               {data2[0]}
             </div>
           )}
-          {data2?.[1] && <p className="text-lg text-[#535862] dark:text-[#94979C]">{data2[1]}</p>}
+          {data2?.[1] && (
+            <p className="text-md md:text-lg text-[#535862] dark:text-[#94979C]">{data2[1]}</p>
+          )}
         </div>
 
         {value2?.buttons?.[0]?.text && (

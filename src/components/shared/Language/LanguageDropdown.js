@@ -11,7 +11,7 @@ export default function LanguageDropdown() {
 
   const languages = [
     { label: 'English', code: '' },
-    { label: 'العربية', code: 'ar' },
+    // { label: 'العربية', code: 'ar' },
     { label: 'Français', code: 'fr' },
   ];
 

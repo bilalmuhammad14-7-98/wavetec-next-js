@@ -1,6 +1,6 @@
 import React from 'react';
 import HeroImage from '@/public/assets/ai-power.png';
-import BGImage from '@/public/assets/bg2.png';
+import BGImage from '@/public/assets/bg3.png';
 import Image from 'next/image';
 import Container from '../shared/Container/Container';
 

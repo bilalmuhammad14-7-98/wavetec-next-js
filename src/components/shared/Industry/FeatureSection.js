@@ -19,7 +19,7 @@ export default function FeatureSection({ value, value2 }) {
         <div className="text-[#181D27] text-3xl font-semibold mb-3 dark:text-[#CECFD2]">
           {data?.[0] || value?.heading}
         </div>
-        <h1 className="text-[#181D27] dark:text-[#F7F7F7] text-3xl md:text-lg mb-3">
+        <h1 className="text-[#181D27] dark:text-[#F7F7F7] text-md md:text-lg mb-3">
           {data?.[1] || value?.title}
         </h1>
         <p className="text-[#535862] max-w-2xl dark:text-[#94979C] text-base md:text-lg">

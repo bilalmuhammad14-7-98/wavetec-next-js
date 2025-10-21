@@ -10,19 +10,19 @@ export default function CaseStudies({ value }) {
   console.log('Case Studies Value:', value);
 
   return (
-    <section className="py-16 bg-white dark:bg-[#0C0E12]">
+    <section className="py-16 bg-[#FAFAFA] dark:bg-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex flex-col md:flex-row items-center justify-between mb-8">
           <div>
-            <h2 className="text-4xl font-semibold text-gray-900 dark:text-white">
+            <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 dark:text-white">
               {value?.blocks?.[0]?.text?.replace(/&amp;/g, '&')}
             </h2>
             <p className="text-[#535862] text-lg font-normal mt-2 max-w-xl dark:text-white">
               {value?.blocks?.[1]?.text}
             </p>
           </div>
-          <button className="mt-4 sm:mt-0 text-white text-sm font-medium px-4 py-2 rounded-md btn-primary-color cursor-pointer">
+          <button className="w-full md:w-auto my-4 sm:mt-0 text-white text-sm font-medium px-4 py-2 rounded-md btn-primary-color cursor-pointer">
             {value?.buttons?.[0]?.text}
           </button>
         </div>

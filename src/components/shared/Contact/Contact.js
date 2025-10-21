@@ -26,7 +26,7 @@ export default function Contact({ value }) {
     }
   }, []);
   return (
-    <section className="w-full dark:bg-[#0C0E12] py-16">
+    <section className="w-full dark:bg-[#0C0E12] pt-16">
       <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12 border-b border-[#D5D7DA]">
         {/* Left: Image */}
         <div className="order-2 lg:order-1">

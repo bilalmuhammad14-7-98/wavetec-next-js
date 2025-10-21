@@ -20,16 +20,13 @@ import { useSelector } from 'react-redux';
 
 function page() {
   const language = useSelector((state) => state.language.lang);
-
   const { data, isLoading } = useQuery({
-    queryKey: ['platform', language],
+    queryKey: ['solution', language],
     queryFn: () => fetchPlatformDetails(80226, language),
     staleTime: 1000 * 60 * 2, // ✅ Cache for 5 mins
     refetchOnWindowFocus: false,
   });
-  console.log('Solution Data:', data);
   const sections = data?.sections;
-  console.log('Solution Data:', sections);
 
   if (isLoading) return <p className="text-center py-10">Loading...</p>;
   return (
@@ -40,8 +37,17 @@ function page() {
       </Container>
       <IndustryIntro value={sections?.[2]} />
       <ChallengesSection value={sections?.[3]} value2={sections?.[4]} />
+      <Container>
+        <div className="h-[1px] bg-[#E9EAEB] my-2"></div>
+      </Container>
       <TypesOfKiosks value={sections?.[5]} />
+      <Container>
+        <div className="h-[1px] bg-[#E9EAEB] my-2"></div>
+      </Container>
       <BusinessImpact value={sections?.[6]} />
+      <Container>
+        <div className="h-[1px] bg-[#E9EAEB] my-2"></div>
+      </Container>
       <DigitalSolutionsGrid value={sections?.[7]} />
       <IntegrationsShowcase value={sections?.[8]} />
       <Container>
