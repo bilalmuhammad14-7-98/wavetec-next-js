@@ -30,9 +30,9 @@ const menuItems = [
   {
     title: 'Industries',
     links: [
-      { label: 'Banking', url: '/industries/banking', icon: <FiDatabase /> },
-      { label: 'Platform', url: '/industries/platform', icon: <FiLayers /> },
-      { label: 'Retail', url: '#', icon: <FiShoppingCart /> },
+      { label: 'Banking', url: '#', icon: <FiDatabase /> },
+      { label: 'Platform', url: '#', icon: <FiLayers /> },
+      { label: 'Solutions', url: '/industries/solutions/', icon: <FiShoppingCart /> },
       { label: 'Telecom', url: '/telco', icon: <FiGlobe /> },
     ],
   },
@@ -48,7 +48,7 @@ const menuItems = [
   {
     title: 'Company',
     links: [
-      { label: 'About Us', url: '/about', icon: <FiInfo /> },
+      { label: 'About Us', url: '#', icon: <FiInfo /> },
       { label: 'Careers', url: '#', icon: <FiBriefcase /> },
       { label: 'Press', url: '#', icon: <FiMic /> },
     ],
@@ -56,12 +56,12 @@ const menuItems = [
   {
     title: 'Resources',
     links: [
-      { label: 'Blog', url: '/blog', icon: <FiBookOpen /> },
+      { label: 'Blog', url: '#', icon: <FiBookOpen /> },
       { label: 'Whitepapers', url: '#', icon: <FiFileText /> },
       { label: 'Events', url: '#', icon: <FiCalendar /> },
     ],
   },
-  { title: 'Products', url: '/products' },
+  { title: 'Products', url: '#' },
 ];
 
 export default function Navbar() {

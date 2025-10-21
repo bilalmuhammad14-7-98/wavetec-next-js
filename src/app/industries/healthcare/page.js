@@ -25,8 +25,8 @@ function HealthCare() {
       <Container>
         <HealthSolution />
         <CustomerSuccesStories />
-        <Contact />
-        <Email />
+        {/* <Contact />
+        <Email /> */}
       </Container>
     </div>
   );
