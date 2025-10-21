@@ -22,6 +22,7 @@ import {
   FiBookOpen,
   FiFileText,
 } from 'react-icons/fi';
+import LanguageDropdown from '../Language/LanguageDropdown';
 
 // import LanguageDropdown from '../LanguageDropdown';
 
@@ -118,7 +119,7 @@ export default function Navbar() {
             src={
               pathname === '/industries/banking' || pathname === '/telco'
                 ? '/assets/bg2.png'
-                : '/assets/background.png'
+                : '/assets/bg2.png'
             }
             alt="background"
             fill
@@ -216,9 +217,9 @@ export default function Navbar() {
             )}
           </button>
 
-          {/* <div className="hidden lg:block">
+          <div className="hidden lg:block">
             <LanguageDropdown />
-          </div> */}
+          </div>
 
           <button className="hidden lg:flex bg-[#155EEF] text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700">
             Book a free demo

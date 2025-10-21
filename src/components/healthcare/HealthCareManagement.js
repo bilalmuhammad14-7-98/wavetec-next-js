@@ -7,6 +7,7 @@ import Image, { StaticImageData } from 'next/image';
 import ICON from '@/public/assets/f-icon.png';
 import ICON2 from '@/public/assets/f2-icon.png';
 import Container from '../shared/Container/Container';
+import Videos from '../shared/Video/Videos';
 
 export default function HealthCareManagement() {
   return (
@@ -46,7 +47,7 @@ export default function HealthCareManagement() {
       </div>
 
       {/* Video block */}
-      <Container>
+      {/* <Container>
         <div className="bg-background">
           <div className="mt-0  pb-8">
             <div
@@ -54,7 +55,7 @@ export default function HealthCareManagement() {
                 aspect-[16/9] sm:aspect-[4/3] lg:aspect-[16/10]"
             >
               <video
-                src="/assets/video.mp4"
+                src=""
                 className="absolute inset-0 h-full w-full object-cover"
                 controls
                 loop
@@ -63,7 +64,8 @@ export default function HealthCareManagement() {
             </div>
           </div>
         </div>
-      </Container>
+      </Container> */}
+      <Videos url={'/assets/healthcare.mp4'} />
     </section>
   );
 }

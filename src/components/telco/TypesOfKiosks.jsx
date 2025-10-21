@@ -1,6 +1,10 @@
 import Image from 'next/image';
 import Icon from '@/public/assets/Icon.png';
 import Mockup from '@/public/assets/telco-mobile-kiosk.png';
+import MultiPayment from '@/public/assets/multi-payment.png';
+import Biometric from '@/public/assets/advanced-biometric.png';
+import Scanning from '@/public/assets/document-scanning.png';
+import Sensors from '@/public/assets/sensors.png';
 
 // Background image for the whole section
 import SectionBg from '@/public/assets/telco-features-bg.png';
@@ -9,43 +13,63 @@ export default function TypesOfKiosks() {
   const kiosks = [
     {
       id: 'qsr',
-      title: 'Quick Service Restaurant Self-Service Kiosks',
+      title: 'SIM Card Dispensing & Mobile Top-Up',
+      description:
+        'Enable instant SIM issuance, activation, and mobile balance recharge to serve customers anytime, anywhere. Perfect for reducing queues at physical branches and increasing accessibility.',
       points: [
-        'Order & pay at kiosk with upsell prompts.',
-        'Reduce queue times and improve throughput.',
-        'Integrates with POS & kitchen display systems.',
+        'Dispense new SIM cards with real-time backend integration.',
+        'Support for prepaid & postpaid top-ups.',
+        'eKYC process with automated ID verification.',
       ],
       image: Mockup,
     },
     {
       id: 'sco',
-      title: 'Self Checkout Kiosks',
+      title: 'Multi-Payment Options',
+      description:
+        'Offer customers the flexibility to pay in their preferred way, increasing transaction success rates and customer satisfaction.',
       points: [
-        'Barcode scanning and scale verification.',
-        'Multiple payment options with receipt printer.',
-        'Real-time loss-prevention flags.',
+        'Accept cash, cheque, POS card, and QR code payments.',
+        'PCI-compliant payment processing.',
+        'Secure, encrypted transaction handling.',
       ],
-      image: Mockup,
+      image: MultiPayment,
     },
     {
       id: 'sim',
-      title: 'SIM Dispensing Kiosks',
+      title: 'Advanced Biometric Verification',
+      description:
+        'Ensure compliance with telecom regulations and enhance security with fast, accurate biometric checks.',
       points: [
-        'eKYC & ID verification with biometrics.',
-        'Instant SIM issuance & top-up support.',
-        'Remote monitoring and device telemetry.',
+        'Thumbprint scanning.',
+        'Facial recognition verification.',
+        'ID card scanning for instant authentication.',
       ],
-      image: Mockup,
+      image: Biometric,
     },
     {
       id: 'sim',
-      title: 'SIM Dispensing Kiosks',
+      title: 'Document & ID Scanning',
+      description:
+        'Speed up telecom processes like SIM registration and account opening with integrated scanning capabilities.',
       points: [
-        'eKYC & ID verification with biometrics.',
-        'Instant SIM issuance & top-up support.',
-        'Remote monitoring and device telemetry.',
+        'A4 document scanner for contracts & forms.',
+        'OCR-enabled ID scanning.',
+        'High-speed processing for minimal wait time.',
       ],
-      image: Mockup,
+      image: Scanning,
+    },
+    {
+      id: 'sim',
+      title: 'Proximity Sensors & Dynamic Display',
+      description:
+        'Capture customer attention and improve engagement with smart display technology.',
+      points: [
+        'Motion-activated proximity sensors.',
+        '32-inch responsive touchscreen interface.',
+        'Display targeted ads and promotions during idle time.',
+      ],
+      image: Sensors,
     },
   ];
 
@@ -60,6 +84,7 @@ export default function TypesOfKiosks() {
       }}
     >
       {/* Background image */}
+
       {/* <Image
         src={SectionBg}
         alt=""
@@ -76,14 +101,14 @@ export default function TypesOfKiosks() {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h4 className="text-sm font-semibold text-blue-600 uppercase tracking-wide">
-            Self-Service Kiosks
+            Our Self-Service Kiosks
           </h4>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mt-2">
-            Types of Self Service Kiosks
+            Key Features of Our SIM Dispensing Kiosks
           </h2>
           <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet risus ut urna
-            vehicula malesuada ut a ligula.
+            Our kiosks are engineered to deliver speed, security, and customer convenience, helping
+            telcos offer seamless 24/7 services while reducing operational costs.
           </p>
         </div>
 
@@ -92,7 +117,7 @@ export default function TypesOfKiosks() {
           {kiosks.map((item, i) => {
             const imageOnRight = i % 2 === 0; // 0,2,4... right; 1,3,5... left
             return (
-              <div key={item.id} className="flex flex-col lg:flex-row items-center gap-8">
+              <div key={i} className="flex flex-col lg:flex-row items-center gap-8">
                 {/* Text column */}
                 <div
                   className={
@@ -102,6 +127,7 @@ export default function TypesOfKiosks() {
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                     {item.title}
                   </h3>
+                  <p className=" text-gray-900 dark:text-white">{item?.description}</p>
                   <ul className="mt-3 space-y-2">
                     {item.points.map((pt, j) => (
                       <li

@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import ContactImage from '@/public/assets/contact-image.png';
+import { useEffect } from 'react';
 
 const productOptions = [
   'WhatsApp Queuing',
@@ -12,7 +13,18 @@ const productOptions = [
   'Other',
 ];
 
-export default function Contact() {
+export default function Contact({ value }) {
+  useEffect(() => {
+    // Check if script already added
+    if (
+      !document.querySelector('script[src="https://js-na2.hsforms.net/forms/embed/244100998.js"]')
+    ) {
+      const script = document.createElement('script');
+      script.src = 'https://js-na2.hsforms.net/forms/embed/244100998.js';
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+  }, []);
   return (
     <section className="w-full dark:bg-[#0C0E12] py-16">
       <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12 border-b border-[#D5D7DA]">
@@ -20,7 +32,7 @@ export default function Contact() {
         <div className="order-2 lg:order-1">
           <div className="relative h-full overflow-hidden">
             <Image
-              src={ContactImage}
+              src={value?.images?.[0]}
               alt="Contact"
               width={600}
               height={500}
@@ -33,7 +45,7 @@ export default function Contact() {
         {/* Right: Form */}
         <div className="order-1 lg:order-2 flex w-full flex-col justify-center px-0 lg:px-6">
           {/* Header */}
-          <div className="mb-8">
+          {/* <div className="mb-8">
             <h2 className="text-4xl md:text-5xl font-semibold text-[#181D27] dark:text-[#F7F7F7] leading-tight">
               Let’s level up your <br /> brand, together
             </h2>
@@ -43,12 +55,18 @@ export default function Contact() {
                 sales@wavetec.com
               </a>
             </p>
-          </div>
+          </div> */}
 
           {/* Contact Form */}
           <form className="w-full space-y-6">
+            <div
+              className="hs-form-frame"
+              data-region="na2"
+              data-form-id="ccfdc585-4204-4133-81ff-a5653b089f6a"
+              data-portal-id="244100998"
+            ></div>
             {/* Name Fields */}
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            {/* <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div>
                 <label
                   htmlFor="fname"
@@ -79,10 +97,10 @@ export default function Contact() {
                   className="w-full rounded-md border border-[#D5D7DA] p-2 px-2 outline-none focus:ring-2 focus:ring-blue-500 dark:border-[#373A41] dark:text-white dark:placeholder-[#85888E]"
                 />
               </div>
-            </div>
+            </div> */}
 
             {/* Email */}
-            <div>
+            {/* <div>
               <label
                 htmlFor="email"
                 className="mb-1 block text-sm font-medium text-[#414651] dark:text-white"
@@ -96,10 +114,10 @@ export default function Contact() {
                 placeholder="you@company.com"
                 className="w-full rounded-md border border-[#D5D7DA] p-2 px-2 outline-none focus:ring-2 focus:ring-blue-500 dark:border-[#373A41] dark:text-white dark:placeholder-[#85888E]"
               />
-            </div>
+            </div> */}
 
             {/* Phone */}
-            <div>
+            {/* <div>
               <label
                 htmlFor="phone"
                 className="mb-1 block text-sm font-medium text-[#414651] dark:text-white"
@@ -112,10 +130,10 @@ export default function Contact() {
                 placeholder="+1 (555) 000-0000"
                 className="w-full rounded-md border border-[#D5D7DA] p-2 px-2 outline-none focus:ring-2 focus:ring-blue-500 dark:border-[#373A41] dark:text-white dark:placeholder-[#85888E]"
               />
-            </div>
+            </div> */}
 
             {/* Message */}
-            <div>
+            {/* <div>
               <label
                 htmlFor="message"
                 className="mb-1 block text-sm font-medium text-[#414651] dark:text-white"
@@ -128,10 +146,10 @@ export default function Contact() {
                 placeholder="Leave us a message..."
                 className="h-28 w-full resize-none rounded-md border border-[#D5D7DA] p-2 px-2 outline-none focus:ring-2 focus:ring-blue-500 dark:border-[#373A41] dark:text-white dark:placeholder-[#85888E]"
               />
-            </div>
+            </div> */}
 
             {/* Products */}
-            <div>
+            {/* <div>
               <label className="mb-4 block text-base font-medium text-[#414651] dark:text-white">
                 Products<span className="text-[#155EEF]">*</span>
               </label>
@@ -146,15 +164,15 @@ export default function Contact() {
                   </label>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Submit */}
-            <button
+            {/* <button
               type="submit"
               className="w-full cursor-pointer rounded-md py-2 font-medium text-white btn-primary-color transition"
             >
               Submit
-            </button>
+            </button> */}
           </form>
         </div>
       </div>

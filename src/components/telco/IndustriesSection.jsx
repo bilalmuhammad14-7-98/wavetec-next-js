@@ -8,10 +8,30 @@ import ScreenMockup from '@/public/assets/telco-mockup.png';
 
 export default function IndustriesSection() {
   const items = [
-    { icon: RestaurantsIcon, title: 'Restaurants' },
-    { icon: TelecomIcon, title: 'Telecom' },
-    { icon: BankIcon, title: 'Bank' },
-    { icon: RetailIcon, title: 'Retail' },
+    {
+      icon: RestaurantsIcon,
+      title: '24/7 Availability',
+      description:
+        'Operate beyond store hours with kiosks that handle SIM issuance, activation, and mobile top-ups anytime. This constant accessibility reduces branch dependency, improves customer satisfaction, and strengthens brand loyalty.',
+    },
+    {
+      icon: TelecomIcon,
+      title: 'Cost Effectiveness',
+      description:
+        'Lower operational costs by automating routine transactions. SIM dispensing kiosks reduce staff requirements, ease branch traffic, and streamline workflows, allowing telecom providers to allocate resources more effectively.',
+    },
+    {
+      icon: BankIcon,
+      title: 'Faster Customer Onboarding',
+      description:
+        'Complete SIM verification, activation, and dispensing in under two minutes. Integrated eKYC, biometrics, payments, and document scanning create a secure, one-stop experience that reduces wait times.',
+    },
+    {
+      icon: RetailIcon,
+      title: 'Revenue Growth Opportunities',
+      description:
+        'Use the 32-inch display to promote offers, plans, and add-on services during transactions. Strategically placed kiosks can upsell data packages and expand your telecom brand’s presence in high-footfall areas.',
+    },
   ];
 
   return (
@@ -24,9 +44,7 @@ export default function IndustriesSection() {
 
         {/* Header */}
         <div className="mb-12 max-w-3xl">
-          <h4 className="text-sm font-semibold text-blue-600 uppercase tracking-wide">
-            Industries
-          </h4>
+          {/* <h4 className="text-sm font-semibold text-blue-600 uppercase tracking-wide"></h4> */}
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mt-2">
             Offerings & Benefits of Wavetec’s SIM Dispensing Kiosks
           </h2>
@@ -47,10 +65,7 @@ export default function IndustriesSection() {
                   <h3 className="text-md font-semibold text-gray-900 dark:text-white">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae risus
-                    et urna vehicula maximus a ut.
-                  </p>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm">{item.description}</p>
                 </div>
               </div>
             ))}

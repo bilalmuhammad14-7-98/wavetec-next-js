@@ -11,7 +11,13 @@ export default function Benefits() {
         <div className="flex flex-col lg:flex-row items-start gap-10">
           {/* Image Section */}
           <div className="w-full lg:w-1/2">
-            <Image src={BGImage} alt="Feature" className="w-full h-auto object-cover" priority />
+            <Image
+              loading="lazy"
+              src={BGImage}
+              alt="Feature"
+              className="w-full h-auto object-cover"
+              priority
+            />
           </div>
 
           {/* Text Content */}

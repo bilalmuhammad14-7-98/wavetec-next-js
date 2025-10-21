@@ -29,7 +29,7 @@ export default function HeroSection() {
 
           <div className="mt-6 flex flex-col sm:flex-row gap-4">
             <button className="bg-white cursor-pointer  dark:bg-gray-100 text-gray-900 dark:text-black border border-gray-300 dark:border-gray-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-gray-200 transition">
-              Showcase
+              Showreel
             </button>
             <button className="btn-primary-color cursor-pointer text-white px-6 py-3 rounded-lg font-medium ">
               Get in touch

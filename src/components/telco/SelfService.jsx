@@ -1,15 +1,16 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 // Existing mockups (right column)
 import TabletMockup from '@/public/assets/telco-full.png';
 import PhoneMockup from '@/public/assets/telco-mobile.png';
+import Videos from '../shared/Video/Videos';
 
 // ▶︎ New: video/banner poster image (will replace with real video later)
-import VideoPoster from '@/public/assets/telco-video-banner.png';
 
 export default function SelfService() {
+  const [isPlaying, setIsPlaying] = useState(false);
   return (
     <section className="bg-white dark:bg-[#0C0E12] py-16 md:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -92,48 +93,8 @@ export default function SelfService() {
           </div>
         </div>
 
-        {/* ROW 3 — Video section (centered, max 960x540 like Figma) */}
-        <div className="mt-12 sm:mt-14">
-          <div className="mx-auto w-full max-w-[960px]">
-            <div className="relative overflow-hidden rounded-[24px] border border-gray-100 dark:border-gray-800 shadow-sm">
-              {/* Keep a strict 16:9 aspect; scales down on smaller screens, capped at 960px width */}
-              <div className="relative aspect-[16/9]">
-                <Image
-                  src={VideoPoster}
-                  alt="Self-service kiosk video"
-                  fill
-                  sizes="(min-width:1024px) 960px, 100vw"
-                  className="object-cover"
-                />
-
-                {/* Play button (no onClick while it's a Server Component) */}
-                <button
-                  type="button"
-                  aria-label="Play video"
-                  className="
-            absolute inset-0 m-auto h-14 w-14 sm:h-16 sm:w-16
-            rounded-full bg-black/60 backdrop-blur
-            flex items-center justify-center
-            transition hover:scale-105 hover:bg-black/70 focus:outline-none focus:ring-2 focus:ring-white/60
-          "
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="h-7 w-7 text-white"
-                  >
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </button>
-
-                {/* Faux progress bar hint (optional) */}
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 p-3">
-                  <div className="mx-auto h-1.5 w-2/3 rounded-full bg-white/40" />
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="mt-18 sm:mt-20">
+          <Videos url="/assets/telco.mp4" />
         </div>
       </div>
     </section>

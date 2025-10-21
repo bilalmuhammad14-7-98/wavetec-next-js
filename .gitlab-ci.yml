@@ -1,0 +1,22 @@
+deploy_to_server:
+  stage: deploy
+  only:
+    - main
+  script:
+    - mkdir -p ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_SERVER "echo Connected to $DEPLOY_SERVER"
+
+    - ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_SERVER "
+        sudo mkdir -p /var/www/wavetec-frontend &&
+        cd /var/www/wavetec-frontend || (sudo mkdir -p /var/www/wavetec-frontend && cd /var/www/wavetec-frontend) &&
+        if [ ! -d .git ]; then
+          sudo git clone git@git.wavetec.live:wavetec/wavetec-website/website-frontend.git .;
+        fi &&
+        sudo git fetch origin main &&
+        sudo git reset --hard origin/main &&
+        sudo chown -R ubuntu:ubuntu /var/www/wavetec-frontend &&
+        npm install &&
+        pm2 restart wavetec-website || pm2 start ecosystem.config.js --name 'wavetec-website' -- start
+      "
