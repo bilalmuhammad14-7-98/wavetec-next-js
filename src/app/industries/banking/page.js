@@ -248,124 +248,126 @@ export default function Banking() {
 
   // console.log('Banking data:', bankingData[0].hero);
   return (
-    <div>
-      {/* <HeroMain data={bankingData[0].hero} /> */}
-      <ProductHero {...bankingData[0].hero} data={bankingData} />
-      {/* <Container> */}
-      <Container>
-        <Companies />
-      </Container>
+    <>
+      <div>
+        {/* <HeroMain data={bankingData[0].hero} /> */}
+        {/* <ProductHero {...bankingData[0].hero} data={bankingData} /> */}
+        {/* <Container> */}
+        {/* <Container>
+          <Companies />
+        </Container>
 
-      <IndustryIntro
-        eyebrow="Industries We Serve"
-        title="Banking Solutions"
-        description="Wavetec helps banks enhance customer experiences using queue management, self-service kiosks, ATMs, analytics, and AI to streamline operations."
-      />
+        <IndustryIntro
+          eyebrow="Industries We Serve"
+          title="Banking Solutions"
+          description="Wavetec helps banks enhance customer experiences using queue management, self-service kiosks, ATMs, analytics, and AI to streamline operations."
+        />
 
-      <ChallengesSection
-        title="Banking Challenges"
-        intro="Banks face pressure to deliver faster, personalized experiences while reducing costs, managing queues, ensuring service consistency, and improving overall performance"
-        items={[
-          {
-            icon: FeaturedIcon,
-            iconAlt: 'Check',
-            heading: 'Long Queues',
-            description:
-              'Long waiting times frustrate customers and reduce satisfaction, impacting both in-branch and digital experiences.',
-          },
-          {
-            icon: FeaturedIcon,
-            iconAlt: 'Check',
-            heading: 'Inconsistent Service',
-            description:
-              'Variations in staff performance create unpredictable experiences, undermining trust and service quality.',
-          },
-          {
-            icon: FeaturedIcon,
-            iconAlt: 'Check',
-            heading: 'Limited Insights',
-            description:
-              'Lack of analytics prevents banks from optimizing resources, measuring performance, and improving operational efficiency.',
-          },
-        ]}
-      />
+        <ChallengesSection
+          title="Banking Challenges"
+          intro="Banks face pressure to deliver faster, personalized experiences while reducing costs, managing queues, ensuring service consistency, and improving overall performance"
+          items={[
+            {
+              icon: FeaturedIcon,
+              iconAlt: 'Check',
+              heading: 'Long Queues',
+              description:
+                'Long waiting times frustrate customers and reduce satisfaction, impacting both in-branch and digital experiences.',
+            },
+            {
+              icon: FeaturedIcon,
+              iconAlt: 'Check',
+              heading: 'Inconsistent Service',
+              description:
+                'Variations in staff performance create unpredictable experiences, undermining trust and service quality.',
+            },
+            {
+              icon: FeaturedIcon,
+              iconAlt: 'Check',
+              heading: 'Limited Insights',
+              description:
+                'Lack of analytics prevents banks from optimizing resources, measuring performance, and improving operational efficiency.',
+            },
+          ]}
+        />
 
-      <BusinessImpact
-        title="Proven Business Impact"
-        intro="Wavetec’s integrated CX solutions enable banks to achieve measurable improvements in efficiency, compliance, and customer satisfaction across every branch and digital channel."
-        stats={[
-          { value: '40%', label: 'Reduced average wait times' },
-          { value: '25%', label: 'Increase in staff productivity' },
-          { value: '30%', label: 'Higher customer satisfaction' },
-        ]}
-      />
+        <BusinessImpact
+          title="Proven Business Impact"
+          intro="Wavetec’s integrated CX solutions enable banks to achieve measurable improvements in efficiency, compliance, and customer satisfaction across every branch and digital channel."
+          stats={[
+            { value: '40%', label: 'Reduced average wait times' },
+            { value: '25%', label: 'Increase in staff productivity' },
+            { value: '30%', label: 'Higher customer satisfaction' },
+          ]}
+        />
 
-      <DigitalSolutionsGrid
-        title="Digital Transformation Solutions"
-        items={[
-          {
-            heading: 'WhatsApp Virtual Queuing Solution',
-            description:
-              'Enable customers to join queues via WhatsApp, reducing wait times and improving experience.',
-            link: { label: 'WhatsApp Queuing', href: '#' },
-          },
-          {
-            heading: 'Mobile-Q – Virtual Mobile Queuing App',
-            description:
-              'Customers join queues from smartphones with real-time updates, improving efficiency.',
-            link: { label: 'Mobile-Q App', href: '#' },
-          },
-          {
-            heading: 'UNO-Q Linear Queuing',
-            description:
-              'Single-line system that streamlines customer flow and reduces wait times.',
-            link: { label: 'UNO-Q Linear Queue', href: '#' },
-          },
-          {
-            heading: 'SafeQ People Counting',
-            description: 'Monitor foot traffic in real time to optimize space and service.',
-            link: { label: 'SafeQ People Counting', href: '#' },
-          },
-          {
-            heading: 'Customer Feedback System',
-            description:
-              'Collect and analyze customer feedback in real time to improve service quality.',
-            link: { label: 'Customer Feedback', href: '#' },
-          },
-          {
-            heading: 'Ticket Dispenser',
-            description:
-              'Automate ticket issuance to manage queues efficiently and reduce customer wait times.',
-            link: { label: 'Learn more', href: '#' },
-          },
-        ]}
-      />
+        <DigitalSolutionsGrid
+          title="Digital Transformation Solutions"
+          items={[
+            {
+              heading: 'WhatsApp Virtual Queuing Solution',
+              description:
+                'Enable customers to join queues via WhatsApp, reducing wait times and improving experience.',
+              link: { label: 'WhatsApp Queuing', href: '#' },
+            },
+            {
+              heading: 'Mobile-Q – Virtual Mobile Queuing App',
+              description:
+                'Customers join queues from smartphones with real-time updates, improving efficiency.',
+              link: { label: 'Mobile-Q App', href: '#' },
+            },
+            {
+              heading: 'UNO-Q Linear Queuing',
+              description:
+                'Single-line system that streamlines customer flow and reduces wait times.',
+              link: { label: 'UNO-Q Linear Queue', href: '#' },
+            },
+            {
+              heading: 'SafeQ People Counting',
+              description: 'Monitor foot traffic in real time to optimize space and service.',
+              link: { label: 'SafeQ People Counting', href: '#' },
+            },
+            {
+              heading: 'Customer Feedback System',
+              description:
+                'Collect and analyze customer feedback in real time to improve service quality.',
+              link: { label: 'Customer Feedback', href: '#' },
+            },
+            {
+              heading: 'Ticket Dispenser',
+              description:
+                'Automate ticket issuance to manage queues efficiently and reduce customer wait times.',
+              link: { label: 'Learn more', href: '#' },
+            },
+          ]}
+        />
 
-      <IntegrationsShowcase
-        eyebrow="Integrations"
-        title="Seamless Integrations & Regulatory Compliance"
-        description="Our platform connects with leading industry systems while fully adhering to global standards, ensuring security and seamless operations for our clients."
-        logosImg={LogosStrip}
-        cta={{ label: 'All integrations', href: '#' }}
-      />
+        <IntegrationsShowcase
+          eyebrow="Integrations"
+          title="Seamless Integrations & Regulatory Compliance"
+          description="Our platform connects with leading industry systems while fully adhering to global standards, ensuring security and seamless operations for our clients."
+          logosImg={LogosStrip}
+          cta={{ label: 'All integrations', href: '#' }}
+        /> */}
 
-      {/* </Container> */}
-      {/* <SelfService /> */}
-      <ProductOverview {...bankingData[1].overview} />
-      <Testimonial />
-      {/* <TypesOfKiosks /> */}
-      <ProductTypes {...bankingData[2].types} />
-      {/* <IndustriesSection /> */}
-      <IndustryUseCases {...bankingData[3].industries} />
-      {/* <BlogSection /> */}
-      <BlogPreview {...bankingData[4].blogs} />
+        {/* </Container> */}
+        {/* <SelfService /> */}
+        {/* <ProductOverview {...bankingData[1].overview} />
+        <Testimonial /> */}
+        {/* <TypesOfKiosks /> */}
+        {/* <ProductTypes {...bankingData[2].types} /> */}
+        {/* <IndustriesSection /> */}
+        {/* <IndustryUseCases {...bankingData[3].industries} /> */}
+        {/* <BlogSection /> */}
+        {/* <BlogPreview {...bankingData[4].blogs} /> */}
 
-      <CaseStudies />
-      <FaqSection />
-      <Container>
-        <Contact />
-        <Email />
-      </Container>
-    </div>
+        {/* <CaseStudies />
+        <FaqSection />
+        <Container>
+          <Contact />
+          <Email />
+        </Container> */}
+      </div>
+    </>
   );
 }
