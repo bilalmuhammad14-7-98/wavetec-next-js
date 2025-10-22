@@ -53,6 +53,7 @@ import BlogPreview from '@/src/components/shared/Products/BlogPreview';
 
 // Challenges Section images
 import FeaturedIcon from '@/public/assets/Featured icon.png'; // the check-in-square icon you shared
+import CaseStudies from '@/src/components/industries/CaseStudies';
 
 // Industries UseCases Section images
 import LogosStrip from '@/public/assets/Content.png';
@@ -247,12 +248,11 @@ export default function Banking() {
 
   // console.log('Banking data:', bankingData[0].hero);
   return (
-    <>
-      <div>
-        {/* <HeroMain data={bankingData[0].hero} /> */}
-        {/* <ProductHero {...bankingData[0].hero} data={bankingData} /> */}
-        {/* <Container> */}
-        {/* <Container>
+    <div>
+      {/* <HeroMain data={bankingData[0].hero} /> */}
+      <ProductHero {...bankingData[0].hero} data={bankingData} />
+      {/* <Container> */}
+      <Container>
         <Companies />
       </Container>
 
@@ -339,24 +339,33 @@ export default function Banking() {
             link: { label: 'Learn more', href: '#' },
           },
         ]}
-      /> */}
+      />
 
-        {/* </Container> */}
-        {/* <SelfService /> */}
-        {/* <ProductOverview {...bankingData[1].overview} />
-      <Testimonial /> */}
-        {/* <TypesOfKiosks /> */}
-        {/* <ProductTypes {...bankingData[2].types} /> */}
-        {/* <IndustriesSection /> */}
-        {/* <IndustryUseCases {...bankingData[3].industries} /> */}
-        {/* <BlogSection /> */}
-        {/* <BlogPreview {...bankingData[4].blogs} />
+      <IntegrationsShowcase
+        eyebrow="Integrations"
+        title="Seamless Integrations & Regulatory Compliance"
+        description="Our platform connects with leading industry systems while fully adhering to global standards, ensuring security and seamless operations for our clients."
+        logosImg={LogosStrip}
+        cta={{ label: 'All integrations', href: '#' }}
+      />
+
+      {/* </Container> */}
+      {/* <SelfService /> */}
+      <ProductOverview {...bankingData[1].overview} />
+      <Testimonial />
+      {/* <TypesOfKiosks /> */}
+      <ProductTypes {...bankingData[2].types} />
+      {/* <IndustriesSection /> */}
+      <IndustryUseCases {...bankingData[3].industries} />
+      {/* <BlogSection /> */}
+      <BlogPreview {...bankingData[4].blogs} />
+
+      <CaseStudies />
       <FaqSection />
       <Container>
         <Contact />
         <Email />
-      </Container> */}
-      </div>
-    </>
+      </Container>
+    </div>
   );
 }

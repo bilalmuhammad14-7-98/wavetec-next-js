@@ -22,7 +22,7 @@ function page() {
   const language = useSelector((state) => state.language.lang);
   const { data, isLoading } = useQuery({
     queryKey: ['solution', language],
-    queryFn: () => fetchPlatformDetails(80226, language),
+    queryFn: () => fetchPlatformDetails(80339, language),
     staleTime: 1000 * 60 * 2, // ✅ Cache for 5 mins
     refetchOnWindowFocus: false,
   });

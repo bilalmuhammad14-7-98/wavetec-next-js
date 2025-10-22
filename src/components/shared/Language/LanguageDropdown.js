@@ -11,8 +11,9 @@ export default function LanguageDropdown() {
 
   const languages = [
     { label: 'English', code: '' },
-    // { label: 'العربية', code: 'ar' },
+    { label: 'العربية', code: 'ar' },
     { label: 'Français', code: 'fr' },
+    { label: 'Spanish', code: 'es' },
   ];
 
   const toggleDropdown = () => setIsOpen((prev) => !prev);

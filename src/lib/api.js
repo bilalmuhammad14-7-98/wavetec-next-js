@@ -9,7 +9,7 @@ export async function fetchPosts() {
 }
 
 export async function fetchPlatformDetails(paramId, lang) {
-  const res = await axios.get(`${baseURL}/?id=80226&lang=${lang}`);
+  const res = await axios.get(`${baseURL}/?id=${paramId}&lang=${lang}`);
   console.log('Platform Details Response:', res.data);
   return res.data;
 }

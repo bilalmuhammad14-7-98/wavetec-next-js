@@ -32,15 +32,15 @@ const menuItems = [
     links: [
       { label: 'Banking', url: '#', icon: <FiDatabase /> },
       { label: 'Platform', url: '#', icon: <FiLayers /> },
-      { label: 'Solutions', url: '/industries/solutions/', icon: <FiShoppingCart /> },
-      { label: 'Telecom', url: '/telco', icon: <FiGlobe /> },
+      { label: 'Solutions', url: '/industries/solutions', icon: <FiShoppingCart /> },
+      { label: 'Telecom', url: '#', icon: <FiGlobe /> },
     ],
   },
   {
     title: 'Solutions',
     links: [
-      { label: 'Spectra', url: '/industries/spectra', icon: <FiList /> },
-      { label: 'Health Care', url: '/industries/healthcare', icon: <FiCalendar /> },
+      { label: 'Spectra', url: '#', icon: <FiList /> },
+      { label: 'Health Care', url: '#', icon: <FiCalendar /> },
       { label: 'Feedback', url: '#', icon: <FiMessageSquare /> },
       { label: 'Digital Signage', url: '#', icon: <FiMonitor /> },
     ],
@@ -217,9 +217,9 @@ export default function Navbar() {
             )}
           </button>
 
-          {/* <div className="hidden lg:block">
+          <div className="hidden lg:block">
             <LanguageDropdown />
-          </div> */}
+          </div>
 
           <button className="hidden lg:flex bg-[#155EEF] text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700">
             Book a free demo

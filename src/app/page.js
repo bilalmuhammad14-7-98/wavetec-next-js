@@ -14,7 +14,7 @@
 // export default function Home() {
 //   const data = {
 //     hero: {
-//       title: 'Digital Banking Solutions Wavetec',
+//       title: 'Digital Banking Solutions',
 //       description:
 //         'Streamline your customer journey with Wavetec bank branch management solutions and offer a superior branch banking customer experience for all.',
 //       bgImage: '/public/assets/background.png',
@@ -148,9 +148,9 @@
 //   };
 //   return (
 //     <div>
-//       {/* <Platform /> */}
+//       <Platform />
 
-//       <Container>
+//       {/* <Container>
 //         <Hero value={data?.['hero']} />
 //         <Companies />
 //         <BlogSection value={data?.['blogs']} />
@@ -161,7 +161,7 @@
 //         <FeatureSection value={data?.['features']} />
 //         <Contact />
 //         <Email />
-//       </Container>
+//       </Container> */}
 //     </div>
 //   );
 // }
@@ -190,7 +190,7 @@ function page() {
   const language = useSelector((state) => state.language.lang);
   const { data, isLoading } = useQuery({
     queryKey: ['solution', language],
-    queryFn: () => fetchPlatformDetails(80226, language),
+    queryFn: () => fetchPlatformDetails(80339, language),
     staleTime: 1000 * 60 * 2, // ✅ Cache for 5 mins
     refetchOnWindowFocus: false,
   });

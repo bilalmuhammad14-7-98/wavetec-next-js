@@ -121,7 +121,7 @@ export default function TypesOfKiosks({ value }) {
           <div className="flex flex-col-reverse lg:flex-row items-center gap-8">
             <div className="w-full lg:w-1/2 space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                {value?.blocks?.[7]?.text.replace(/ &amp;/g, ' &') || 'OUR SOLUTIONS'}
+                {value?.blocks?.[7]?.text?.replace(/ &amp;/g, ' &') || 'OUR SOLUTIONS'}
               </h3>
               <ul className="space-y-2">
                 <li
@@ -136,7 +136,7 @@ export default function TypesOfKiosks({ value }) {
                   className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-[#175CD3] dark:text-[#84ADFF] hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#175CD3] dark:focus:ring-[#84ADFF] dark:focus:ring-offset-slate-900 rounded"
                   // aria-label={item.link.label || item.heading}
                 >
-                  {value?.blocks?.[14]?.text || 'Learn More'}
+                  {value?.blocks?.[14]?.text.replace(/ &amp;/g, '&') || 'Learn More'}
                   <FiArrowRight aria-hidden="true" />
                 </a>
                 {/* {Array.from({ length: 3 }).map((_, i) => (
